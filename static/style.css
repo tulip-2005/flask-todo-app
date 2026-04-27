@@ -1,0 +1,233 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    text-align: center;
+}
+
+h1 {
+    color:#333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc   
+}
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+#taskInput{
+    flex: 2;
+    min-width: 150px;
+    width: 70%;
+}
+#searchInput {
+    display: block;
+    margin: 15px auto;
+    width: 60%;
+}
+button {
+    padding: 8px 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #667eea;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: black;
+}
+
+li {
+    background: #f9f9ff;
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+li input[type="chechbox"] {
+    margin-top: 5px;
+}
+.task-text {
+    word-break: break-word;
+}
+button:hover{
+    background-color: #5a67d8;
+    transform:scale(1.05);
+    opacity: 0.9;
+}
+.controls, .filters{
+    background-color: #f3f4ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.controls input {
+    padding: 10px;
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.controls input,
+.controls select {
+    padding: 8px;
+    border-radius: 5px;
+}
+.filters button{
+    margin: 10px;
+}
+.operation{
+    background-color: #f3f4ff;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+}
+.container{
+    width:600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+
+}
+.done {
+    color:gray;
+    text-decoration: line-through;
+}
+#taskCounter {
+    margin: 10px;
+    font-weight: bold;
+    color: #333;
+    background-color: #667eea;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+.priority {
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+#priority {
+    flex: 1;
+    min-width: 120px;
+}
+
+.High {
+    background-color: red;
+}
+
+.Medium {
+    background-color: orange;
+}
+
+.Low {
+    background-color: green;
+}
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between task and priority */
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+li span {
+    margin-right: 5px;
+}
+.date {
+    font-size: 12px;
+    color: #555;
+    margin-left: 10px;
+}
+.navbar {
+    width: 100%;
+    background: #667eea;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#dueDate {
+    flex: 1;
+    min-width: 120px;
+}
+/* DARK MODE */
+.dark {
+    background: #1e1e2f;
+    color: white;
+}
+
+.dark .container {
+    background: #2c2c3e;
+}
+.dark h1{
+    color:white;
+}
+
+.dark li {
+    background: #3a3a50;
+}
+
+.dark .controls,
+.dark .filters {
+    background: #2c2c3e;
+}
+
+.dark button {
+    background-color: #444;
+    color: white;
+}
+
+.dark input,
+.dark select {
+    background: #444;
+    color: white;
+    border: none;
+}
+.dark input::placeholder {
+    color: #ccc;
+}
+.dark .task-text {
+    color:white;
+}
+.dark li span {
+    color: white !important;
+}
+.dark .date {
+    color: #bbb;
+}

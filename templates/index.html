@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<!--navbar-->
+<div class="navbar">
+    <h2>MY TODO APP</h2>
+    <button onclick="toggleDarkMode()" id="darkBtn">Dark 🌙</button>
+</div>
+<!--main container-->
+<div class="container">
+
+    <h1>Make Your To-Do List</h1><br>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        
+        <select id="priority">
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <input type="date" id="dueDate">
+
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <!--search-->
+    <input type="text" id="searchInput" placeholder="Search task" onkeyup="showTasks()">
+
+    <!--filters-->
+    <div class="filters">
+        <button onclick="setFilter('all')">All</button>
+        <button onclick="setFilter('done')">Done</button>
+        <button onclick="setFilter('pending')">Pending</button>
+    </div>
+
+    <!--taask counter-->
+    <div id="taskCounter"></div>
+
+    <!--task list-->
+    <ul id="taskList"></ul>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
